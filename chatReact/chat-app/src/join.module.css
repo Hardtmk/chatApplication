@@ -1,0 +1,282 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+*{
+ padding: 0;
+ margin:0;
+ box-sizing: border-box;
+}
+body{
+ font-family: 'Roboto', sans-serif;
+margin:0;
+color:white;
+background-image:url('./background-junk.jpg') ;
+background-position: center center;
+background-size: cover;
+overflow: hidden;
+} 
+
+body::before{
+content:'';
+position: absolute;
+top:0;
+left:0;
+width:100%;
+height:100vh;
+background-color: rgba(0,0,0,0.3);
+z-index:-1;
+}
+
+/* 首先你得先要把這個container的height變成100vh才能夠Center在中閒 */
+.container{
+ height:100vh;
+ display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: flex-start;
+margin-left: 20px;
+}
+
+/* 選擇所有btn的兒子*/
+.btn>*{
+width:50px;
+height:50px;
+border-radius: 50%;
+margin-top:20px;
+transition: all 0.3s linear;
+animation: opening 2s ease-in;
+cursor: pointer;
+outline: none;
+}
+
+.btn:active{
+transform: translateY(4px);
+}
+.btn>*:hover{
+ transform: scale(1.5)
+}
+
+
+@keyframes opening {
+ 0% {
+  transform: scale(1.2);
+ }
+
+ 50% {
+  transform: scale(0.8);
+ }
+ 100% {
+  transform: scale(1);
+ }
+}
+
+/*裏面的每個元素都以獨立的block形式呈現 */
+.btn{
+ /* display: block; */
+ background-color: transparent;
+ border: none;
+}
+
+
+/* 如果是display block, 裏面的東西好像center不了*/
+
+.form{
+ /* text-align: center; */
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ position: absolute;
+ top:50%;
+ left:50%;
+ transform: translate(-50%,-50%);
+ box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+ height: 50vh;
+    width: 50vw;
+    z-index:1;
+    position: absolute;
+    min-width:200px ;
+}
+/* 也就是最小也不能小過200 */
+
+
+
+.form h1{
+    position: absolute;
+    top:15%;
+    font-size:1.6rem ;
+    
+}
+.name{
+ background-color: transparent;
+ border: 0;
+ border-bottom:2px #fff solid ;
+ width:100%;
+ padding:15px 0;
+ font-size: 1rem;
+ color:#fff;
+ height:30px;
+ background-color: transparent;
+ position: absolute;
+ top:50%;
+
+}
+.name:focus{
+ outline:0;
+ border-bottom-color:lightblue ;
+}
+
+.form label{
+position:absolute;
+top:100px;
+left:0;
+pointer-events: none;
+top:40%;
+font-size: 1.5rem;
+}
+
+
+.submit{
+background-color: transparent;
+border: none;
+font-family: 'Roboto', sans-serif;
+margin-top: 10px;
+font-size: 2.25rem;
+opacity: 0.7;
+cursor: pointer;
+position: absolute;
+top:65%;
+background-color: #fff;
+padding-right:10px;
+padding-left: 10px;
+border-radius: 50%;
+
+}
+.submit:hover{
+    transform: scale(1.1);
+}
+
+/* 就是當畫面一去到700的時候就會馬上變色
+ */
+@media screen and (max-width: 700px) {
+    body{
+        font-size: 0.5rem;
+            background-size:140%;
+            background-repeat: no-repeat;
+            background-position: top 30% left 50%;
+            overflow: hidden;
+    }
+.form{
+    color:white;
+    opacity: 0.8;
+}
+.container{
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+top:5%;
+left:50%;
+transform: translateX(-50%);
+}
+img{
+    margin-right:30px;
+}
+img:hover{
+transform: translatey(-5%);
+}
+}
+
+/* 就是說poasition and display不能一起用 */
+/* 要container兩個width 都是一樣的話
+最好的做法是讓他們的width根據container的width來設置
+如果container是等於100px 
+倘如它們的width 被設置為50%
+則它們就會使一樣的大小 */
+
+
+/* 因爲display flex 是設定向左靠的 */
+/* 所以即使text-align也是沒有用的 */
+
+
+
+
+/* block 裏面的同時如何center */
+/* 好像 */
+/* 爲什麽focus和不focus的時候不太一樣 
+如何點擊的時候也沒有那個外框出現*/
+/* 爲什麽submit button 不能center */
+/* 爲什麽同是200px, 下面的竟然還大過上面的 */
+/* css input = submit */
+/*不知道爲什麽要float 才可以 */
+/* 除了cover還有什么選擇 */
+/* img好像加不了box shadow */
+/* 一有margin auto auto, display flex 就會失效  */
+/* 什麽是point-event */
+/* css animation */
+/* open and close */
+
+
+/*或許可以這樣 */
+
+/* 應該要選擇什麽背景圖片才好呢
+不能是高質素的
+最好是卡通色彩的
+給人一種慌秒的感覺
+還是真的要以圖片嗎
+圖片恐怕不合適吧
+或者你可以有一種暗淡的色彩作爲背景
+ */
+
+ /* 就是有很多不同的圖片
+ 設置某一個圖片使其成爲background 
+ 然後中間再畫出一個container 
+ container裏面是放有圖片
+ 在圖片的外層放有這個opacity不太鮮明的背景
+ 使其發光 */
+
+ /* 對於你來說可以怎麽做到呢 */
+
+
+ /* 如何能做到每一個container的轉變都是不同速度呢 */
+
+ /* 首先得要為每一個img都設置transform 
+然後transform 的速度不能一樣
+那麽如何定義transform 的速度呢
+就是用number來定義
+可能要看看ease in and ease out 
+可是應該沒有關係吧
+或者要用到javascript 
+不一定要同時到達
+但又不能差太遠
+就是這個先
+然後才到第二個
+然後才到第三個
+或者一開始把它們設在很遠的位置
+然後再重新回來
+有的路程就比較短
+有的就比較長 */
+
+
+/* 我記得position 的部分
+fixed就會一直停留在某個, 隨著頁面流走還是那個位置
+stickbar, 無論畫面捲走多久,我們都會看得見
+absolute, 就算那邊有box,還是會在那個位置
+relative, 會根據那個box 的位置而定位
+
+如果父元素是absolute,子元素也是absolute,則會根據父元素而定位
+如果父元素是relative, 子元素是relative, 則也會根據父元素來定位
+如果父元素是absolute,子元素是relative,則也會根據父元素來定位
+如果父元素是relative,子元素是absolute, 
+
+ */
+
+
+ /* .container>*>* 
+  第一個星星兒子
+  第二個星星孫子
+ */
+
+ /* 
+ /* 選擇所有btn的兒子*/
+ /* .btn>* { */
+ /* */ 
+
+ /* 如何才能夠 */
