@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 import JoinChat from './join';
-import { AccessContext } from './context/userContext';
+import { AccessContext } from '../context/userContext';
 import { useState } from 'react';
 function App() {
   const name = 'saa';

@@ -98,7 +98,7 @@ body::before {
 }
 
 /* 也就是最小也不能小過200 */
-
+/*---------Name component-----------  */
 .form h1 {
   position: absolute;
   top: 15%;
@@ -175,6 +175,8 @@ body::before {
     left: 50%;
     transform: translateX(-50%);
   }
+
+  /*---------FoodIcon component-----------  */
 
   img {
     margin-right: 30px;

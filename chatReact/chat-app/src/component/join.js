@@ -1,15 +1,15 @@
 import React, { useEffect, useRef, useState, useContext } from 'react';
 import io from 'socket.io-client';
-import { AccessContext } from './context/userContext';
-import styles from './style/userList.module.css';
-import FoodIcon from './component/FoodIcon';
-import Name from './component/Name';
-import Disclaration from './component/disclaration';
-import Member from './component/member';
+import { AccessContext } from '../context/userContext';
+import styles from '../style/userList.module.css';
+import FoodIcon from './FoodIcon';
+import Name from './Name';
+import Disclaration from './disclaration';
+import Member from './member';
 import { v4 as uuidV4 } from 'uuid';
-import MessageInput from './component/messageInput';
-import MessageDisaplay from './component/messageDisaplay';
-import SectionContainer from './component/SectionContainer';
+import MessageInput from './messageInput';
+import MessageDisaplay from './messageDisaplay';
+import SectionContainer from './SectionContainer';
 
 const JoinChat = () => {
   const [userRecord, setUserRecord] = useState({ name: '', image: '' });

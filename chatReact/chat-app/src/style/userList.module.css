@@ -18,6 +18,7 @@
   background-color: rgba(0, 0, 0, 0.5);
 }
 
+/*---------disclaration component-----------  */
 .disclaration {
   display: flex;
   flex-direction: column;
@@ -83,6 +84,8 @@
   left: 10%;
   bottom: 10%;
 }
+
+/*---------member component-----------  */
 .UserList {
   text-align: center;
   width: 60%;
@@ -109,6 +112,7 @@
   width: 100%;
 }
 
+/*---------SectionContainer component-----------  */
 .ChatWord {
   color: black;
   margin-top: 30px;
