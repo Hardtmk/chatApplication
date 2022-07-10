@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.bodyCover {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: -1;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.disclaration {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  border: 2px solid black;
+  width: 500px;
+  height: 300px;
+  background-color: white;
+  border-radius: 10px;
+  z-index: 10;
+  transform-origin: center center;
+  transition: 200ms ease-in-out;
+  animation: toBebig 2s ease-in-out;
+}
+
+@keyframes toBebig {
+  0% {
+    transform: translate(-50%, -50%) scale(0);
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+.exchange {
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.2);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+.disPlay {
+  color: white;
+  background-color: black;
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+}
+.background {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 10%;
+  right: 10%;
+  left: 10%;
+  bottom: 10%;
+}
+.UserList {
+  text-align: center;
+  width: 60%;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: blue;
+}
+.titleList {
+  height: 20%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  font-family: 'Roboto', sans-serif;
+  color: black;
+}
+.showList {
+  height: 80%;
+  overflow: auto;
+  background-color: red;
+  width: 100%;
+}
+
+.ChatWord {
+  color: black;
+  margin-top: 30px;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.chatRoom {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  height: 500px;
+  background-color: yellow;
+  position: relative;
+}
+
+.chatContainer {
+  height: 60%;
+  background-color: purple;
+  overflow: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+}
+
+.boxtext {
+  background-color: bisque;
+  flex-wrap: wrap;
+  border-radius: 5px;
+  color: black;
+  text-align: center;
+  margin-left: 10px;
+  padding: 10px;
+}
+.detail {
+  font-size: 3px;
+}
+.detail > * {
+  margin-right: 3px;
+}
+
+form {
+  position: absolute;
+  height: 20%;
+  bottom: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.submit {
+  width: 100px;
+}
+
+.displayFlex {
+  display: flex;
+  /* 可以防止圖片走樣 */
+  align-items: center;
+}
+.userImg {
+  width: 50px;
+  border-radius: 50%;
+}
+
+.time {
+  float: center;
+}
+
+.message {
+  background-color: transparent;
+  border: none;
+  border-bottom: 3px solid lightblue;
+  margin-bottom: 10px;
+}
+.message:focus {
+  outline: none;
+}
+.submit {
+  background-color: transparent;
+  padding: 5px;
+  box-shadow: 1px pink;
+  border-radius: 5px;
+}
+.submit:hover {
+  transform: scale(1.1);
+}
